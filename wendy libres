@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Responsive Webpage</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* HERO */
+        .hero {
+            background: #6c63ff;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        /* SECTIONS */
+        .container {
+            padding: 20px;
+        }
+
+        .about, .gallery {
+            margin-bottom: 30px;
+        }
+
+        /* GALLERY GRID */
+        .gallery-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .box {
+            background: #ddd;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* TABLET VIEW */
+        @media (min-width: 600px) {
+            .gallery-items {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* DESKTOP VIEW */
+        @media (min-width: 900px) {
+            .gallery-items {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <h2>MySite</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>This is my responsive webpage project</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="container about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I am a student learning web design. This page shows a responsive layout
+            using Flexbox and Grid.
+        </p>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="container gallery">
+        <h2>My Projects</h2>
+        <div class="gallery-items">
+            <div class="box">Project 1</div>
+            <div class="box">Project 2</div>
+            <div class="box">Project 3</div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+
+</body>
+</html>
